@@ -4,23 +4,29 @@ public class MovieTickets {
 
 
     public static void main(String[] args) {
-
         Scanner read = new Scanner(System.in);
+        String grade = "";
 
-        System.out.print("How much money do you have?");
-        double money = read.nextDouble();
+        System.out.print("Please enter your percentage grade:");
+        double percentage = read.nextDouble();
 
-        if(money >= 10){
-            System.out.println("You can buy a ticket.");
+        if(percentage < 60){
+          grade = "F";
         }
 
-        if(money > 20){
-            System.out.println("You can also buy popcorn.");
+        if(percentage >= 60){
+          grade = "D";
         }
 
-        if(money < 10){
-            System.out.println("You can't buy a ticket.");
+        if(percentage>= 70){
+          grade = "C";
         }
-
+        if(percentage >= 80){
+            grade = "B";
+        }
+        if(percentage >= 90){
+            grade = "A";
+        }
+        System.out.println("Your grade is: " + grade);
     }
 }
